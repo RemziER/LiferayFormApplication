@@ -12,7 +12,6 @@ public class SubmitFormStepDefinitions {
 
     @When("the user enters {string} {string} {string}")
     public void the_user_enters(String name, String dateOfBirth, String comment) {
-        if(name!=null && dateOfBirth!=null && comment!=null){
             new FormPage().nameInputBox.sendKeys(name);
             BrowserUtils.waitFor(2);
             new FormPage().nameInputBox.sendKeys(Keys.TAB);
@@ -21,7 +20,6 @@ public class SubmitFormStepDefinitions {
             new FormPage().dateOfBirthPanel.sendKeys(Keys.TAB);
             new FormPage().commentInputBox.sendKeys(comment);
             BrowserUtils.waitFor(2);
-        }
 
     }
 
